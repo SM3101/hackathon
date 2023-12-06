@@ -280,7 +280,7 @@
       const navbarEl = document.querySelector('.navbar');
 
       window.addEventListener('scroll', () => {
-      if(window.scrollY > 400 && window.scrollY < 850){
+      if(window.scrollY > 400 && window.scrollY < 700){
         navbarEl.classList.add('navbar-scrolled');
         $("#home").css("color", "gray");
         $("#about").css("color", "white");
@@ -296,13 +296,13 @@
 
         navbarEl.classList.remove('navbar-scrolled');
       }
-      else if (window.scrollY >= 850 && window.scrollY < 1200){
+      else if (window.scrollY >= 700 && window.scrollY < 1300){
         $("#home").css("color", "gray");
         $("#about").css("color", "gray");
         $("#work").css("color", "white");
         $("#contact").css("color", "gray");
       }
-      else if (window.scrollY >= 1200){
+      else if (window.scrollY >= 1300){
         $("#home").css("color", "gray");
         $("#about").css("color", "gray");
         $("#work").css("color", "gray");
