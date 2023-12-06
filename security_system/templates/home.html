@@ -25,7 +25,7 @@
                 <a class="nav_about option nav-link" href = "#about_scroll" id="about">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav_work option nav-link" href = "#work_scroll" id="work">WORK</a>
+                <a class="nav_work option nav-link" href = "#work_scroll" id="work">PROJECT</a>
               </li>
               <li class="nav-item">
                 <a class="nav_contact option nav-link" href = "#contact_scroll" id="contact">CONTACT</a>
@@ -296,13 +296,13 @@
 
         navbarEl.classList.remove('navbar-scrolled');
       }
-      else if (window.scrollY >= 850 && window.scrollY < 2000){
+      else if (window.scrollY >= 850 && window.scrollY < 1200){
         $("#home").css("color", "gray");
         $("#about").css("color", "gray");
         $("#work").css("color", "white");
         $("#contact").css("color", "gray");
       }
-      else if (window.scrollY >= 2000){
+      else if (window.scrollY >= 1200){
         $("#home").css("color", "gray");
         $("#about").css("color", "gray");
         $("#work").css("color", "gray");
