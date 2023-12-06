@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+
+<body>
+
+    <!--Navbar Starts-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid justify-content-center">
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav_home option nav-link" href = "#hero_scroll" id="home">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav_about option nav-link" href = "#about_scroll" id="about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav_work option nav-link" href = "#work_scroll" id="work">WORK</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav_contact option nav-link" href = "#contact_scroll" id="contact">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav_resume option nav-link" href = "https://www.canva.com/design/DAF2NhatEL0/w7aZhiUhT4_9ct0wFiaRSA/edit">PRESENTATION</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!--Navbar Ends-->
+
+    <!--Hero Starts-->
+
+    <section id="hero_scroll" class="hero">
+        <div class="container text-center hero d-flex align-items-center">
+          <div>
+            <p class = "hero_first">Hello, We are</p>
+            <h1 class = "hero_second">ASA</h1>
+            <h5 class = "hero_third">Applicable Simple Solutions</h5>
+          </div>
+        </div>
+    </section>
+
+    <!--Hero Ends-->
+
+
+    <!--About Me Starts-->
+
+    <section id="about_scroll" class = "about">
+        <div class="container">
+          <h1 class="aboutheader text-center my-5">
+            ABOUT
+            <span class = "aboutheaderME">US</span>
+          </h1>
+
+          <div class="row flex align-items-center">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-dark obj_buttom" id = "objective">Shoaib</button>
+                    <button type="button" class="btn btn-dark per_button" id = "personal">Abirath</button>
+                    <button type="button" class="btn btn-dark edu_button" id = "education">Anjan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p id="aboutparagraph">My name is Shoaib and I would like to be a software developer in the near future. I enjoy doing hobbies such as programming, reading, and biking.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About Me Ends-->
+
+
+
+    <!--Work Section Starts-->
+
+    <section id = "work_scroll" class = "work">
+        <div class = "container">
+            <h1 class="workheader text-center my-5">
+                SECURITY
+                <span class = "workheaderDETAIL">SYSTEM</span>
+            </h1>
+
+            <!--Industrial Experience Starts-->
+            <p class = "industrialexp text-center">What is our project?</p>
+
+            <div class="top2cards row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title d-flex justify-content-center">Hardware</h5>
+                      <p class="card-text text-center">We used multiple components such as buzzers, distance sensors, LEDs, switches, etc. This allowed us to make a reliable security system that alerts individuals if a person if trying to trespass without using the right card.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title d-flex justify-content-center">Software</h5>
+                      <p class="card-text text-center">We used Arduino programming skills to program the security system to funtion correctly. However we did use some code from other resources to program our RFID sensor which would have taken a while to understand.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!--Industrial Experience Ends-->
+
+        </div>
+    </section>
+
+    <!--Work Section Ends-->
+
+
+    <!--Contact Me Starts-->
+
+    <section id = "contact_scroll" class = "contact">
+        <div class = "container-fluid row">
+            <h1 class="contactheader text-center my-5">
+                CONTACT
+                <span class = "contactheaderME">ME</span>
+            </h1>
+
+            <div class="contact-me col-lg-6 text-center">
+                <div class="card bottom-margin">
+                  <div class="contact_card_body card-body">
+                    <h3 class="contact_card_title card-title">Leave a Message</h3>
+                    <form method = "post">
+                        {% csrf_token %}
+                        <p class = "topic">Name</p>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your name" name = "user_name" required>
+                            <label class = "example" for="floatingInput">Your Name</label>
+                            <p id="nameValid" class="text-danger form-text">Name is not valid</p>
+                        </div>
+
+                        <p class = "topic">Email Address</p>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com"  name = "emailaddress" required>
+                            <label class = "example" for="floatingPassword">name@example.com</label>
+                            <p id="emailValid" class="text-danger form-text mb-1">Email is not valid</p>
+                        </div>
+                        <br>
+
+                        <p class = "topic">Phone Number</p>
+                        <div class="form-floating">
+                            <input type="tel" class="form-control" id="phone-number" placeholder="Your Phone Number"  name = "phonenumber" required>
+                            <label class = "example" for="floatingTextarea2">Your Phone Number</label>
+                            <p id="phoneValid" class="text-danger form-text mb-1">Phone Number is not valid</p>
+                        </div>
+                        <br>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-dark" type="submit" id="submit">Submit</button>
+                        </div>
+
+                    </form>
+                  </div>
+                </div>        
+            </div>
+
+            <div class="contact_me col-lg-6 text-center">
+                <div class="card bottom-margin">
+                  <div class="contact_card_body card-body">
+                    <h3 class="contact_card_title card-title">Contact Info</h3>
+                    <br><br>
+                    <h5 class = "contact_heading">Email</h5>
+                    <p>asa_ltd@gmail.com</p>
+                    <br>
+                    <h5 class = "contact_heading">Phone Number</h5>
+                    <p>647-435-6583</p>
+                    <br>
+                    <h5 class = "contact_heading">Address</h5>
+                    <p>Canada</p>
+                    <p>Ontario</p>
+                    <p>Brampton</p>
+        
+                  </div>
+                </div>
+              </div>
+
+        </div>
+    </section>
+
+    <!--Contact Me Ends-->
+
+    <!--Footer Begins-->
+
+    <section>
+        <footer class="foot text-center">
+          <h6>Copyright © 2023 All rights reserved</h6>
+          <br>
+          <h6>Made with ❤️ by ASA</h6>
+        </footer>
+    </section>
+
+    <!--Footer Ends-->
+
+    <script>        
+      $(document).ready(function(){
+
+        $("#nameValid").hide();
+        $("#emailValid").hide();
+        $("#phoneValid").hide();
+
+        $('#submit').click(function(){
+          var name = $('#name').val();
+          var email = $('#email').val();
+          var phone_number = $('#phone-number').val();
+          
+          phone_regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+          email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+          if(name.length < 1){
+            $("#nameValid").show();
+          }
+          else{
+            $("#nameValid").hide();
+          }
+
+          if(!email_regex.test(email)){
+            $("#emailValid").show();
+          }
+          else{
+            $("#emailValid").hide();
+          }
+
+          if(!phone_regex.test(phone_number)){
+            $("#phoneValid").show();
+          }
+          else{
+            $("#phoneValid").hide();
+          }
+        });
+
+        $('#objective').click(function(){
+          $("#objective").css("color", "white");
+          $("#personal").css("color", "gray");
+          $("#education").css("color", "gray");
+
+          $("#aboutparagraph").text("My name is Shoaib and I would like to be a software developer in the near future. I enjoy doing hobbies such as programming, reading, and biking.");
+        });
+
+        $('#personal').click(function(){
+          $("#objective").css("color", "gray");
+          $("#personal").css("color", "white");
+          $("#education").css("color", "gray");
+
+          $("#aboutparagraph").text("My name is Abirath and I would like to be a male entertainer in the near future. I enjoy doing hobbies such as gaming, studying, and travelling around the world.");
+        });
+
+        $('#education').click(function(){
+          $("#objective").css("color", "gray");
+          $("#personal").css("color", "gray");
+          $("#education").css("color", "white");
+
+          $("#aboutparagraph").text("My name is Anjan and I would like to be a boxer in the near future. I enjoy doing hobbies such as exercising, travelling, and cooking.");
+        });
+
+      });
+
+      const navbarEl = document.querySelector('.navbar');
+
+      window.addEventListener('scroll', () => {
+      if(window.scrollY > 400 && window.scrollY < 850){
+        navbarEl.classList.add('navbar-scrolled');
+        $("#home").css("color", "gray");
+        $("#about").css("color", "white");
+        $("#work").css("color", "gray");
+        $("#contact").css("color", "gray");
+      }
+      else if(window.scrollY <= 400){
+
+        $("#home").css("color", "white");
+        $("#about").css("color", "gray");
+        $("#work").css("color", "gray");
+        $("#contact").css("color", "gray");
+
+        navbarEl.classList.remove('navbar-scrolled');
+      }
+      else if (window.scrollY >= 850 && window.scrollY < 2000){
+        $("#home").css("color", "gray");
+        $("#about").css("color", "gray");
+        $("#work").css("color", "white");
+        $("#contact").css("color", "gray");
+      }
+      else if (window.scrollY >= 2000){
+        $("#home").css("color", "gray");
+        $("#about").css("color", "gray");
+        $("#work").css("color", "gray");
+        $("#contact").css("color", "white");
+      }
+      
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+    
+</body>
+
+</html>

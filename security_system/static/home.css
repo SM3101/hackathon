@@ -1,0 +1,235 @@
+/*Navbar*/
+.navbar{
+    transition: all 0.5s;
+}
+.option{
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav_home{
+    color: white;
+}
+
+.nav_about{
+    color: gray;
+}
+
+.nav_work{
+    color: gray;
+}
+
+.nav_contact{
+    color: gray;
+}
+
+.nav_resume{
+    color: wheat;
+}
+
+/*Hero Section*/
+.hero{
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.7)url(home_image.jpeg);
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    color: white;
+    background-blend-mode: darken;
+}
+
+.hero_first{
+    font-size: 65px;
+    font-weight: 75;
+}
+
+.hero_second{
+    font-size: 80px;
+}
+
+.hero_third{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 75;
+}
+
+/*About Me*/
+.about{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: rgb(50, 55, 55);
+    color: white;
+}
+
+.aboutheader{
+    color: aliceblue;
+    font-size: 4rem;
+    font-weight: 200;
+    box-shadow: rgba(7, 7, 7, 0.25) 0px 54px 55px, rgba(117, 113, 113, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.aboutheaderME{
+    color: rgb(225, 220, 85);
+    font-weight: 500;
+}
+
+.about p{
+    color: #cbcbcb;
+}
+
+.obj_button{
+    color: white;
+}
+
+.per_button{
+    color: gray;
+}
+
+.edu_button{
+    color: gray;
+}
+
+
+/*Work Detail Section*/
+.work{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: rgb(67, 72, 72);
+    color: white;
+}
+
+.workheader{
+    color: aliceblue;
+    font-size: 4rem;
+    font-weight: 200;
+    box-shadow: rgba(7, 7, 7, 0.25) 0px 54px 55px, rgba(117, 113, 113, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.workheaderDETAIL{
+    color: rgb(225, 220, 85);
+    font-weight: 500;
+}
+
+/*Industrial Experience*/
+.industrialexp{
+    font-size: 25px;
+}
+
+.card{
+    text-align: left;
+    background-color: #6e6e6e;
+}
+
+.period{
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: wheat;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card-text{
+    color: #cbcbcb;
+    margin-bottom: 30px;
+}
+
+.top2cards{
+    margin-bottom: 20px;
+}
+
+/*Personal Projects*/
+.personalprojects{
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.card{
+    text-align: left;
+    background-color: #6e6e6e;
+}
+
+.period{
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: wheat;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card-text{
+    color: #cbcbcb;
+    margin-bottom: 30px;
+}
+
+.personalprojects2cards{
+    margin-bottom: 20px;
+}
+
+
+/*Contact Me Section*/
+.contact{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: rgb(50, 55, 55);
+    color: white;
+}
+
+.contactheader{
+    color: aliceblue;
+    font-size: 4rem;
+    font-weight: 200;
+    box-shadow: rgba(7, 7, 7, 0.25) 0px 54px 55px, rgba(117, 113, 113, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.contactheaderME{
+    color: rgb(225, 220, 85);
+    font-weight: 500;
+}
+
+/*Leave a Message*/
+.contact_card_body{
+    color: #cbcbcb;
+}
+.contact_card_title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: #cbcbcb;
+}
+.example{
+    color: black;
+}
+
+.contact_heading{
+    color: wheat;
+}
+
+/*footer*/
+.foot{
+    background-color: rgb(67, 72, 72);
+    color: #cbcbcb;
+    font-weight: 200;
+    padding: 100px;
+}
